@@ -5,7 +5,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#1e1e1e", // dark theme
     padding: 16,
-    justifyContent: "flex-start",
+    justifyContent: "space-between", // Mudança para distribuir espaço entre topo e base
   },
 
   display: {
@@ -19,17 +19,27 @@ export const styles = StyleSheet.create({
   },
 
   history: {
-  height: 80, // altura fixa (ajuste como preferir)
-  backgroundColor: "#252526",
-  borderRadius: 8,
-  padding: 10,
-  marginBottom: 10,
+    flex: 1, // Agora usa flex para ocupar o espaço disponível
+    backgroundColor: "#252526",
+    borderRadius: 8,
+    padding: 10,
+    marginBottom: 10,
+    maxHeight: '30%', // Limita a altura máxima
 },
 
   historyText: {
     color: "#aaa",
     fontSize: 16,
     marginVertical: 2,
+  },
+
+  topArea: {
+    flex: 1,
+    justifyContent: "flex-start",
+  },
+
+  keypadArea: {
+    marginTop: 'auto', // Empurra para o final do container
   },
 
   buttonsRow: {
